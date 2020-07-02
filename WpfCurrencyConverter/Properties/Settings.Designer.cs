@@ -37,7 +37,7 @@ namespace WpfCurrencyConverter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Eur")]
+        [global::System.Configuration.DefaultSettingValueAttribute("EUR")]
         public global::Domain.Common.CurrencyCodes FromCurrency {
             get {
                 return ((global::Domain.Common.CurrencyCodes)(this["FromCurrency"]));
@@ -49,7 +49,7 @@ namespace WpfCurrencyConverter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Eur")]
+        [global::System.Configuration.DefaultSettingValueAttribute("EUR")]
         public global::Domain.Common.CurrencyCodes ToCurrencty {
             get {
                 return ((global::Domain.Common.CurrencyCodes)(this["ToCurrencty"]));

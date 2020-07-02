@@ -6,10 +6,10 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="FromCurrency" Type="Domain.Common.CurrencyCodes" Scope="User">
-      <Value Profile="(Default)">Eur</Value>
+      <Value Profile="(Default)">EUR</Value>
     </Setting>
     <Setting Name="ToCurrencty" Type="Domain.Common.CurrencyCodes" Scope="User">
-      <Value Profile="(Default)">Eur</Value>
+      <Value Profile="(Default)">EUR</Value>
     </Setting>
   </Settings>
 </SettingsFile>

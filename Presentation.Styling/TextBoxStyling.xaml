@@ -3,9 +3,10 @@
                     xmlns:markup="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="AmountTextBoxStyle" TargetType="{markup:Type TextBox}">
         <Setter Property="FontSize" Value="24" />
-        <Setter Property="Width" Value="300" />
+        <Setter Property="Width" Value="150" />
         <Setter Property="BorderThickness" Value="3" />
         <Setter Property="Margin" Value="3" />
+        <Setter Property="MaxLength" Value="16" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>

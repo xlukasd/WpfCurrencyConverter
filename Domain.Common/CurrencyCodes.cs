@@ -2,11 +2,9 @@
 {
     public enum CurrencyCodes
     {
-        Eur,
-        Usd,
-        Gbp,
-        Czk,
-        Huf,
-        Aud
+        EUR,
+        USD,
+        GBP,
+        CZK,
     }
 }
