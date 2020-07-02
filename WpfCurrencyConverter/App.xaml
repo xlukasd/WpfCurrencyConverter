@@ -1,0 +1,17 @@
+﻿<Application x:Class="WpfCurrencyConverter.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:properties="clr-namespace:WpfCurrencyConverter.Properties">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Presentation.Styling;component/WindowStyling.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Presentation.Styling;component/ButtonStyling.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Presentation.Styling;component/ComboBoxStyling.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Presentation.Styling;component/LabelStyling.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Presentation.Styling;component/TextBoxStyling.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <properties:Settings x:Key="Settings" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

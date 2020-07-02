@@ -1,0 +1,64 @@
+﻿<Window x:Class="Presentation.Controls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:Application.ViewModels;assembly=Application.ViewModels"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel}"
+        Title="MainWindow" 
+        Height="480" Width="640"
+        Style="{DynamicResource MainWindowStyle}">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" >
+            <Label Content="Amount" 
+                   Style="{DynamicResource ResourceKey=CurrencyLabelStyle}"/> 
+            <TextBox x:Name="AmountToConvertTextBox" 
+                     Text="{Binding FromAmount, UpdateSourceTrigger=PropertyChanged}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Label Content="From" 
+                   Style="{DynamicResource ResourceKey=CurrencyLabelStyle}"/>
+
+            <ComboBox Style="{DynamicResource ResourceKey=CurrencyComboBoxStyle}"
+                      Height="{Binding ElementName=AmountToConvertTextBox, Path=ActualHeight, Mode=OneWay}"
+                      ItemsSource="{Binding Currencies}"
+                      SelectedItem="{Binding SelectedFromCurrency}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <Label Content="To" 
+                   Style="{DynamicResource ResourceKey=CurrencyLabelStyle}"/>
+
+            <ComboBox Style="{DynamicResource ResourceKey=CurrencyComboBoxStyle}"
+                      Height="{Binding ElementName=AmountToConvertTextBox, Path=ActualHeight, Mode=OneWay}"
+                      ItemsSource="{Binding Currencies}"
+                      SelectedItem="{Binding SelectedToCurrency}"/>
+        </StackPanel>
+
+        <Button Grid.Row="1" Grid.Column="0" 
+                Style="{DynamicResource ResourceKey=ConvertButtonStyle}"
+                HorizontalAlignment="Left"
+                Content="Convert" 
+                Command="{Binding ConvertCommand}"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" 
+               Style="{DynamicResource ResourceKey=ResultLabelStyle}"
+               HorizontalAlignment="Left"
+               Content="{Binding Result}" />
+    </Grid>
+</Window>

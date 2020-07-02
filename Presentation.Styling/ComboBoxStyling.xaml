@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:markup="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="CurrencyComboBoxStyle" TargetType="{markup:Type ComboBox}">
+        <Setter Property="BorderThickness" Value="3" />
+        <Setter Property="BorderBrush" Value="Gainsboro" />
+        <Setter Property="Margin" Value="3" />
+    </Style>
+</ResourceDictionary>

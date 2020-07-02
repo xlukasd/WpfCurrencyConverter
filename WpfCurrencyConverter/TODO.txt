@@ -1,0 +1,13 @@
+﻿UX/UI:
+- improve design of ComboBoxes
+- improve overall design with support of UX/UI designer
+
+POSSIBLE "BUSINESS" IMPROVEMENTS:
+- better resolve supported currencies by the API
+- create Resources for Texts, so that we can do localisation to different languages
+- allow only Numbers to be put into TextFields
+- implement other Online Converters, in case one is for example not available or something
+
+POSSIBLE TECHNICAL IMPROVEMENTS
+- introduce TaskRelayCommand, so that there is no need to have Async/Await Action delegate
+- check newest C# features and use them in code (we do not use newest so I am aware about all of them)
