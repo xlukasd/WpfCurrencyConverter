@@ -56,7 +56,7 @@ namespace Application.ViewModels
         private bool CanConvert()
         {
             return !_isRunningConversion 
-                   && double.TryParse(FromAmount, out double _)
+                   && double.TryParse(FromAmount, NumberStyles.Currency, CultureInfo.CurrentCulture, out double _)
                    && SelectedToCurrency != SelectedFromCurrency;
         }
 
@@ -66,7 +66,10 @@ namespace Application.ViewModels
 
             try
             {
-                InputObject inputObject = new InputObject(SelectedFromCurrency, SelectedToCurrency, double.Parse(FromAmount));
+                double fromAmount = double.Parse(FromAmount.Replace(',', '.'), NumberStyles.Currency,
+                    CultureInfo.CurrentCulture);
+
+                InputObject inputObject = new InputObject(SelectedFromCurrency, SelectedToCurrency, fromAmount);
 
                 Result<OutputObject> conversionResult = await _currencyConverter.Convert(inputObject);
 
@@ -74,7 +77,7 @@ namespace Application.ViewModels
                 {
                     string finalAmount = conversionResult.Value.Amount.ToString(CultureInfo.InvariantCulture);
 
-                    Result = $@"{FromAmount} {SelectedFromCurrency.ToString().ToUpperInvariant()} = {finalAmount} {SelectedToCurrency.ToString().ToUpperInvariant()}";
+                    Result = $@"{fromAmount.ToString(CultureInfo.CurrentCulture)} {SelectedFromCurrency.ToString().ToUpperInvariant()} = {finalAmount.ToString(CultureInfo.CurrentCulture)} {SelectedToCurrency.ToString().ToUpperInvariant()}";
                 }
                 else
                 {
