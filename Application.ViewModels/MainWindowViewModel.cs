@@ -55,7 +55,9 @@ namespace Application.ViewModels
 
         private bool CanConvert()
         {
-            return !_isRunningConversion && double.TryParse(FromAmount, out double _);
+            return !_isRunningConversion 
+                   && double.TryParse(FromAmount, out double _)
+                   && SelectedToCurrency != SelectedFromCurrency;
         }
 
         private async void Convert()

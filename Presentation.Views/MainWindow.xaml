@@ -6,8 +6,7 @@
         xmlns:viewModels="clr-namespace:Application.ViewModels;assembly=Application.ViewModels"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel}"
-        Title="MainWindow" 
-        Height="480" Width="640"
+        Title="MainWindow"
         Style="{DynamicResource MainWindowStyle}">
     <Grid Margin="20">
         <Grid.RowDefinitions>
@@ -27,6 +26,7 @@
             <Label Content="Amount" 
                    Style="{DynamicResource ResourceKey=CurrencyLabelStyle}"/> 
             <TextBox x:Name="AmountToConvertTextBox" 
+                     Style="{DynamicResource ResourceKey=AmountTextBoxStyle}"
                      Text="{Binding FromAmount, UpdateSourceTrigger=PropertyChanged}" />
         </StackPanel>
 
