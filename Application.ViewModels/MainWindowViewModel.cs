@@ -87,6 +87,7 @@ namespace Application.ViewModels
             finally
             {
                 _isRunningConversion = false;
+                ConvertCommand.RaiseCanExecuteChanged();
             }
         }
     }

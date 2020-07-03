@@ -61,11 +61,12 @@
                     <Border VerticalAlignment="Stretch">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="24"/>
+                                <ColumnDefinition Width="30"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <Image Margin="2,2,5,2" Source="{Binding Converter={StaticResource CurrencyCodeToFlagResourceConverter}}" 
+                            <Image x:Name="CurrencyImage" Margin="2,2,5,2" Source="{Binding Converter={StaticResource CurrencyCodeToFlagResourceConverter}}" 
+                                   Width="24" Height="24"
                                    VerticalAlignment="Center"/>
 
                             <TextBlock Grid.Column="1"

@@ -4,6 +4,6 @@
     <Style x:Key="MainWindowStyle" TargetType="{markup:Type Window}">
         <Setter Property="Background" Value="DodgerBlue" />
         <Setter Property="Width" Value="520" />
-        <Setter Property="Height" Value="390" />
+        <Setter Property="Height" Value="290" />
     </Style>
 </ResourceDictionary>
